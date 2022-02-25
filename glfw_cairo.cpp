@@ -87,8 +87,8 @@ void app::render_main_window()
     void *data = cairo_image_surface_get_data(m_surface);
     cairo_surface_flush(m_surface);
 
-    glBindTexture(GL_TEXTURE_RECTANGLE_ARB, m_texture_id);
-    glTexImage2D(GL_TEXTURE_RECTANGLE_ARB, 0, GL_RGBA, m_width, m_height, 0, GL_BGRA, GL_UNSIGNED_BYTE, data);
+    glBindTexture(GL_TEXTURE_2D, m_texture_id);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_width, m_height, 0, GL_BGRA, GL_UNSIGNED_BYTE, data);
 
     glBegin(GL_QUADS);
     glTexCoord2f(0, 1);
